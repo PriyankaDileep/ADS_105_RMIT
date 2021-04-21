@@ -15,6 +15,7 @@
 		D49BE086262FB62100ACBB98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49BE084262FB62100ACBB98 /* LaunchScreen.storyboard */; };
 		D49BE091262FB62100ACBB98 /* WeatherApp_ADS_105Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE090262FB62100ACBB98 /* WeatherApp_ADS_105Tests.swift */; };
 		D49BE09C262FB62100ACBB98 /* WeatherApp_ADS_105UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE09B262FB62100ACBB98 /* WeatherApp_ADS_105UITests.swift */; };
+		D49BE0AD262FC35700ACBB98 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE0AC262FC35700ACBB98 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D49BE097262FB62100ACBB98 /* WeatherApp_ADS_105UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherApp_ADS_105UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49BE09B262FB62100ACBB98 /* WeatherApp_ADS_105UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApp_ADS_105UITests.swift; sourceTree = "<group>"; };
 		D49BE09D262FB62100ACBB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D49BE0AC262FC35700ACBB98 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		D49BE078262FB61F00ACBB98 /* WeatherApp_ADS_105 */ = {
 			isa = PBXGroup;
 			children = (
+				D49BE0B1262FE15600ACBB98 /* Model */,
 				D49BE079262FB61F00ACBB98 /* AppDelegate.swift */,
 				D49BE07B262FB61F00ACBB98 /* SceneDelegate.swift */,
 				D49BE07D262FB61F00ACBB98 /* ViewController.swift */,
@@ -126,6 +129,14 @@
 				D49BE09D262FB62100ACBB98 /* Info.plist */,
 			);
 			path = WeatherApp_ADS_105UITests;
+			sourceTree = "<group>";
+		};
+		D49BE0B1262FE15600ACBB98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D49BE0AC262FC35700ACBB98 /* Location.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			files = (
 				D49BE07E262FB61F00ACBB98 /* ViewController.swift in Sources */,
 				D49BE07A262FB61F00ACBB98 /* AppDelegate.swift in Sources */,
+				D49BE0AD262FC35700ACBB98 /* Location.swift in Sources */,
 				D49BE07C262FB61F00ACBB98 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
