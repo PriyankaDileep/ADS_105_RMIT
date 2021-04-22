@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Select  a location-->
         <scene sceneID="Feq-N2-NOL">
             <objects>
                 <tableViewController id="MiH-ad-hcM" customClass="HomeTableViewController" customModule="WeatherApp_ADS_105" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="MiH-ad-hcM" id="Mt7-h2-2oG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="pIc-0j-PcS"/>
+                    <navigationItem key="navigationItem" title="Select  a location" id="pIc-0j-PcS"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pT-Wc-pFF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
