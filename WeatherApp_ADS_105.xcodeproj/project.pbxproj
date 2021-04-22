@@ -16,6 +16,8 @@
 		D49BE091262FB62100ACBB98 /* WeatherApp_ADS_105Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE090262FB62100ACBB98 /* WeatherApp_ADS_105Tests.swift */; };
 		D49BE09C262FB62100ACBB98 /* WeatherApp_ADS_105UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE09B262FB62100ACBB98 /* WeatherApp_ADS_105UITests.swift */; };
 		D49BE0AD262FC35700ACBB98 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE0AC262FC35700ACBB98 /* Location.swift */; };
+		D49BE0B6262FE3C000ACBB98 /* LocationDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE0B5262FE3C000ACBB98 /* LocationDataController.swift */; };
+		D49BE0C02631782C00ACBB98 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE0BF2631782C00ACBB98 /* HomeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		D49BE09B262FB62100ACBB98 /* WeatherApp_ADS_105UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApp_ADS_105UITests.swift; sourceTree = "<group>"; };
 		D49BE09D262FB62100ACBB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D49BE0AC262FC35700ACBB98 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		D49BE0B5262FE3C000ACBB98 /* LocationDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataController.swift; sourceTree = "<group>"; };
+		D49BE0BF2631782C00ACBB98 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		D49BE078262FB61F00ACBB98 /* WeatherApp_ADS_105 */ = {
 			isa = PBXGroup;
 			children = (
+				D49BE0BA263175E600ACBB98 /* Controller */,
 				D49BE0B1262FE15600ACBB98 /* Model */,
 				D49BE079262FB61F00ACBB98 /* AppDelegate.swift */,
 				D49BE07B262FB61F00ACBB98 /* SceneDelegate.swift */,
@@ -135,8 +140,25 @@
 			isa = PBXGroup;
 			children = (
 				D49BE0AC262FC35700ACBB98 /* Location.swift */,
+				D49BE0B5262FE3C000ACBB98 /* LocationDataController.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D49BE0BA263175E600ACBB98 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D49BE0BB263177B100ACBB98 /* View Controllers */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D49BE0BB263177B100ACBB98 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D49BE0BF2631782C00ACBB98 /* HomeTableViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,9 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49BE0C02631782C00ACBB98 /* HomeTableViewController.swift in Sources */,
 				D49BE07E262FB61F00ACBB98 /* ViewController.swift in Sources */,
 				D49BE07A262FB61F00ACBB98 /* AppDelegate.swift in Sources */,
 				D49BE0AD262FC35700ACBB98 /* Location.swift in Sources */,
+				D49BE0B6262FE3C000ACBB98 /* LocationDataController.swift in Sources */,
 				D49BE07C262FB61F00ACBB98 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
