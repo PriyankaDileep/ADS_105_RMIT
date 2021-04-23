@@ -1,5 +1,5 @@
 
-final class LocatioDataController {
+final class LocationDataController {
     
     static let locations:[Location] =  [Location(name: "Melbourne", latitude: "-37.813629", longitude: "144.963058"),
                                         Location(name: "Brisbane", latitude: "-27.469770", longitude: "153.025131"),

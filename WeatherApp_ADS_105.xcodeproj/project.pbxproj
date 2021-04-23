@@ -137,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				D49BE0AC262FC35700ACBB98 /* Location.swift */,
-				D49BE0B5262FE3C000ACBB98 /* LocationDataController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -145,6 +144,7 @@
 		D49BE0BA263175E600ACBB98 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D49BE0C72632DABB00ACBB98 /* Data Controllers */,
 				D49BE0BB263177B100ACBB98 /* View Controllers */,
 			);
 			path = Controller;
@@ -156,6 +156,14 @@
 				D49BE0BF2631782C00ACBB98 /* HomeTableViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D49BE0C72632DABB00ACBB98 /* Data Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D49BE0B5262FE3C000ACBB98 /* LocationDataController.swift */,
+			);
+			path = "Data Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
