@@ -17,6 +17,7 @@
 		D49BE0AD262FC35700ACBB98 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE0AC262FC35700ACBB98 /* Location.swift */; };
 		D49BE0B6262FE3C000ACBB98 /* LocationDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE0B5262FE3C000ACBB98 /* LocationDataController.swift */; };
 		D49BE0C02631782C00ACBB98 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE0BF2631782C00ACBB98 /* HomeTableViewController.swift */; };
+		D49BE0C92632DB7F00ACBB98 /* WeatherDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE0C82632DB7F00ACBB98 /* WeatherDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D49BE0AC262FC35700ACBB98 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		D49BE0B5262FE3C000ACBB98 /* LocationDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataController.swift; sourceTree = "<group>"; };
 		D49BE0BF2631782C00ACBB98 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		D49BE0C82632DB7F00ACBB98 /* WeatherDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				D49BE0B5262FE3C000ACBB98 /* LocationDataController.swift */,
+				D49BE0C82632DB7F00ACBB98 /* WeatherDataController.swift */,
 			);
 			path = "Data Controllers";
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			files = (
 				D49BE0C02631782C00ACBB98 /* HomeTableViewController.swift in Sources */,
 				D49BE07A262FB61F00ACBB98 /* AppDelegate.swift in Sources */,
+				D49BE0C92632DB7F00ACBB98 /* WeatherDataController.swift in Sources */,
 				D49BE0AD262FC35700ACBB98 /* Location.swift in Sources */,
 				D49BE0B6262FE3C000ACBB98 /* LocationDataController.swift in Sources */,
 				D49BE07C262FB61F00ACBB98 /* SceneDelegate.swift in Sources */,
