@@ -13,7 +13,7 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(Locations)
+        WeatherDataController.shared.getOpenWeatherData()
        
        
     }
