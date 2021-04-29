@@ -3,4 +3,102 @@
    uuid = "5A664B05-FE2C-444D-9332-02817260984E"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B90A4BCC-00DC-4B54-8110-26562F610709"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApp_ADS_105/Model/Weather/CurrentWeatherDataModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "init(from:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B90A4BCC-00DC-4B54-8110-26562F610709 - 9beb0510e9a3da55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp_ADS_105.CurrentWeatherDataModel.init(from: Swift.Decoder) throws -&gt; WeatherApp_ADS_105.CurrentWeatherDataModel"
+                  moduleName = "WeatherApp_ADS_105"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/priyankaps/Desktop/Swift_Learning_RMIT/WeatherApp_ADS_105/WeatherApp_ADS_105/Model/Weather/CurrentWeatherDataModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "163">
+               </Location>
+               <Location
+                  uuid = "B90A4BCC-00DC-4B54-8110-26562F610709 - 9beb0510e9a3da38"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp_ADS_105.CurrentWeatherDataModel.init(from: Swift.Decoder) throws -&gt; WeatherApp_ADS_105.CurrentWeatherDataModel"
+                  moduleName = "WeatherApp_ADS_105"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/priyankaps/Desktop/Swift_Learning_RMIT/WeatherApp_ADS_105/WeatherApp_ADS_105/Model/Weather/CurrentWeatherDataModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "3616">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2019820-5C0E-4254-B013-F357D1715F4A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApp_ADS_105/Model/Weather/CurrentWeatherDataModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "encode(to:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D2019820-5C0E-4254-B013-F357D1715F4A - 82ed8bb675a554f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp_ADS_105.CurrentWeatherDataModel.encode(to: Swift.Encoder) throws -&gt; ()"
+                  moduleName = "WeatherApp_ADS_105"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/priyankaps/Desktop/Swift_Learning_RMIT/WeatherApp_ADS_105/WeatherApp_ADS_105/Model/Weather/CurrentWeatherDataModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "127">
+               </Location>
+               <Location
+                  uuid = "D2019820-5C0E-4254-B013-F357D1715F4A - 82ed8bb675a554d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp_ADS_105.CurrentWeatherDataModel.encode(to: Swift.Encoder) throws -&gt; ()"
+                  moduleName = "WeatherApp_ADS_105"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/priyankaps/Desktop/Swift_Learning_RMIT/WeatherApp_ADS_105/WeatherApp_ADS_105/Model/Weather/CurrentWeatherDataModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "3292">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

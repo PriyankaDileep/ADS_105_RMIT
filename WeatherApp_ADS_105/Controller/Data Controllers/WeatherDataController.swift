@@ -12,7 +12,7 @@ final class WeatherDataController {
     private static let baseURLString: String = "https://api.openweathermap.org/data/2.5/onecall"
     private static var baseURL: URL = URL(string: baseURLString)!
     private static var apikeyQueryItem: URLQueryItem {
-        URLQueryItem(name: "appid", value: "dbf4f4951c68322c04cac2b2d7349740")
+        URLQueryItem(name: "appid", value: "4168288dde430876e75098e7f4675737")
     }
     
     static let shared: WeatherDataController = WeatherDataController()
@@ -25,17 +25,22 @@ final class WeatherDataController {
         let queryItems:[URLQueryItem] = [Self.apikeyQueryItem,URLQueryItem(name: "lat", value: "-37"),URLQueryItem(name: "lon", value: "144")]
         urlComponents.queryItems = queryItems
         if let url = urlComponents.url{
-            let task = session.dataTask(with: url) { (data, response, error) in
-                guard error == nil else {
-                    print("Error. Data task completed with an error\(String(describing: error))")
-                    return
-                }
-                if let data = data {
-                    print(String(data: data, encoding: .utf8))
+        let task = session.dataTask(with: url) { (data, response, error) in
+            guard error == nil else {
+                print("Error. Data task completed with an error\(String(describing: error))")
+                return
+            }
+            if let data = data {
+                let decoder = JSONDecoder()
+                do {
+                    let response = try decoder.decode(OneCallResponse.self, from: data)
+                    print(response.current)
+                } catch {
+                    debugPrint(error)
                 }
             }
-            task.resume()
         }
-        
+        task.resume()
     }
+}
 }
