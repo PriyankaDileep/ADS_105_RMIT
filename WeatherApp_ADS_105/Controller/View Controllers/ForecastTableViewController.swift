@@ -1,48 +1,34 @@
 //
-//  HomeTableViewController.swift
+//  ForecastTableViewController.swift
 //  WeatherApp_ADS_105
 //
-//  Created by Priyanka PS on 22/4/21.
+//  Created by Priyanka PS on 30/4/21.
 //
 
 import UIKit
 
-class HomeTableViewController: UITableViewController {
+class ForecastTableViewController: UITableViewController {
     
-    private var locations:[Location] = LocationDataController.locations
+    var location:Location!
     
-    private enum segueIdentifier {
-        static let toForecastInformation:String = "LocationsToForecast"
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        WeatherDataController.shared.getOpenWeatherData()
-       
+        //self.navigationItem.title = self.location.name
        
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return locations.count
-    }
-
    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LocationTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        let location = self.locations[indexPath.row]
-        cell.textLabel?.text = location.name
+
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -79,22 +65,14 @@ class HomeTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
-    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch (segue.identifier, segue.destination) {
-        case (segueIdentifier.toForecastInformation, let destination as ForecastTableViewController):
-            if let indexPath = self.tableView.indexPathForSelectedRow{
-                destination.location = self.locations[indexPath.row]
-            } else {
-                print("Location Table view controller , No  selected indexpath")
-            }
-        default:
-            break
-        }
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
+    */
 
 }
