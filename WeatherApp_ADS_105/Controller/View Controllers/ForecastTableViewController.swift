@@ -10,7 +10,9 @@ import UIKit
 class ForecastTableViewController: UITableViewController {
     
     var location:Location!
-    
+    private enum segueIdentifier {
+        static let forecastToCurrentWeatherInformation: String = "forecastToCurrentWeather"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationItem.title = self.location.name
@@ -65,14 +67,20 @@ class ForecastTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        switch (segue.identifier,segue.destination) {
+        case (segueIdentifier.forecastToCurrentWeatherInformation , let destination as CurrentWeatherTableViewController):
+            if let indexpath = self.tableView.indexPathForSelectedRow {
+                destination.location = location
+            }
+        default:
+            break
+        }
     }
-    */
+  
 
 }

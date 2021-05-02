@@ -19,10 +19,35 @@ final class WeatherDataController {
     
     
     
-    func getOpenWeatherData() {
+//    func getOpenWeatherData() {
+//        let session = URLSession.shared
+//        var urlComponents:URLComponents! = URLComponents(string:Self.baseURLString)
+//        let queryItems:[URLQueryItem] = [Self.apikeyQueryItem,URLQueryItem(name: "lat", value: "-37"),URLQueryItem(name: "lon", value: "144")]
+//        urlComponents.queryItems = queryItems
+//        if let url = urlComponents.url{
+//        let task = session.dataTask(with: url) { (data, response, error) in
+//            guard error == nil else {
+//                print("Error. Data task completed with an error\(String(describing: error))")
+//                return
+//            }
+//            if let data = data {
+//                let decoder = JSONDecoder()
+//                do {
+//                    let response = try decoder.decode(OneCallResponse.self, from: data)
+//                    print(response.current)
+//                } catch {
+//                    debugPrint(error)
+//                }
+//            }
+//        }
+//        task.resume()
+//    }
+//}
+    
+    func getOpenWeatherDataFor(forLatitude latitude:String, andLongitude longitude:String, completion:@escaping (Result<OneCallResponse, Error>) -> Void) {
         let session = URLSession.shared
         var urlComponents:URLComponents! = URLComponents(string:Self.baseURLString)
-        let queryItems:[URLQueryItem] = [Self.apikeyQueryItem,URLQueryItem(name: "lat", value: "-37"),URLQueryItem(name: "lon", value: "144")]
+        let queryItems:[URLQueryItem] = [Self.apikeyQueryItem,URLQueryItem(name: "lat", value: latitude),URLQueryItem(name: "lon", value: longitude)]
         urlComponents.queryItems = queryItems
         if let url = urlComponents.url{
         let task = session.dataTask(with: url) { (data, response, error) in
@@ -34,13 +59,16 @@ final class WeatherDataController {
                 let decoder = JSONDecoder()
                 do {
                     let response = try decoder.decode(OneCallResponse.self, from: data)
-                    print(response.current)
+                    completion(.success(response))
+
                 } catch {
-                    debugPrint(error)
+                    completion(.failure(error))
                 }
+            } else if let error = error {
+                completion(.failure(error))
             }
         }
         task.resume()
     }
-}
+    }
 }

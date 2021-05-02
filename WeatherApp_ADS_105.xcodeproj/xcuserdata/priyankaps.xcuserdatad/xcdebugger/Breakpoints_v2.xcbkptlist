@@ -56,14 +56,93 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EF079739-1009-481A-A059-0916F7DE75E2"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeatherApp_ADS_105/Controller/View Controllers/ForecastTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B7F7D2F-6310-43A8-BDFA-D95C95D782EC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApp_ADS_105/Controller/View Controllers/CurrentWeatherTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2B7F7D2F-6310-43A8-BDFA-D95C95D782EC - 1b034fd94a8fa4b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;WeatherApp_ADS_105.CurrentWeatherDataModel, Swift.Error&gt;) -&gt; () in WeatherApp_ADS_105.CurrentWeatherTableViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "WeatherApp_ADS_105"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/priyankaps/Desktop/Swift_Learning_RMIT/WeatherApp_ADS_105/WeatherApp_ADS_105/Controller/View%20Controllers/CurrentWeatherTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "151">
+               </Location>
+               <Location
+                  uuid = "2B7F7D2F-6310-43A8-BDFA-D95C95D782EC - 1b034fd94a8fa4b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;WeatherApp_ADS_105.CurrentWeatherDataModel, Swift.Error&gt;) -&gt; () in WeatherApp_ADS_105.CurrentWeatherTableViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "WeatherApp_ADS_105"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/priyankaps/Desktop/Swift_Learning_RMIT/WeatherApp_ADS_105/WeatherApp_ADS_105/Controller/View%20Controllers/CurrentWeatherTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "175">
+               </Location>
+               <Location
+                  uuid = "2B7F7D2F-6310-43A8-BDFA-D95C95D782EC - 1b034fd94a8fa4b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;WeatherApp_ADS_105.CurrentWeatherDataModel, Swift.Error&gt;) -&gt; () in WeatherApp_ADS_105.CurrentWeatherTableViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "WeatherApp_ADS_105"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/priyankaps/Desktop/Swift_Learning_RMIT/WeatherApp_ADS_105/WeatherApp_ADS_105/Controller/View%20Controllers/CurrentWeatherTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "284">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0E579147-A763-4C50-9C47-AF374E318CF7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApp_ADS_105/Controller/View Controllers/CurrentWeatherTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>

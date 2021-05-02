@@ -16,7 +16,7 @@ class HomeTableViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        WeatherDataController.shared.getOpenWeatherData()
+       // WeatherDataController.shared.getOpenWeatherData()
        
        
     }
