@@ -12,6 +12,7 @@ class ForecastTableViewController: UITableViewController {
     var location:Location!
     private enum segueIdentifier {
         static let forecastToCurrentWeatherInformation: String = "forecastToCurrentWeather"
+        static let forecastToDailyWeatherInformation: String = "toDailyWeatherForecast"
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +78,8 @@ class ForecastTableViewController: UITableViewController {
             if let indexpath = self.tableView.indexPathForSelectedRow {
                 destination.location = location
             }
+        case (segueIdentifier.forecastToDailyWeatherInformation, let destination as DailyWeatherTableViewController):
+              destination.location = location
         default:
             break
         }

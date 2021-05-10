@@ -9,4 +9,5 @@ import Foundation
 
 struct OneCallResponse: Decodable {
     var current: CurrentWeatherDataModel
+    var daily: [DailyWeatherDataModel]
 }

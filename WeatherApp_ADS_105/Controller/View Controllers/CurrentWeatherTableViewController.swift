@@ -28,16 +28,16 @@ class CurrentWeatherTableViewController: UITableViewController {
     }
     
     func updateUI(with currentWeather:CurrentWeatherDataModel){
-           DispatchQueue.main.async {
-                //self.currentWeather = currentWeather
-              self.temperatureLabel.text = String(format: "%.0f",currentWeather.temp - 273.15) + "C"
-                self.weatherIconImageView.image = UIImage(named: currentWeather.weather[0].icon)
-                self.windDirectionLabel.text = "Wind Direction: " + String(currentWeather.windDegree)
-                self.windSpeedLabel.text =  "Wind Speed: " + String(currentWeather.windSpeed)
-                self.weatherLabel.text = currentWeather.weather[0].main
-                print(currentWeather)
-                self.tableView.reloadData()
-            }
+        DispatchQueue.main.async {
+            //self.currentWeather = currentWeather
+            self.temperatureLabel.text = String(format: "%.0f",currentWeather.temp - 273.15) + "C"
+            self.weatherIconImageView.image = UIImage(named: currentWeather.weather[0].icon)
+            self.windDirectionLabel.text = "Wind Direction: " + String(currentWeather.windDegree)
+            self.windSpeedLabel.text =  "Wind Speed: " + String(currentWeather.windSpeed)
+            self.weatherLabel.text = currentWeather.weather[0].main
+            print(currentWeather)
+            self.tableView.reloadData()
+        }
     }
 //    override func numberOfSections(in tableView: UITableView) -> Int {
 //        // #warning Incomplete implementation, return the number of sections
@@ -109,7 +109,6 @@ class CurrentWeatherTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
-        //header.textLabel?.font = UIFont(name: "YourFontname", size: 14.0)
         header.textLabel?.textAlignment = NSTextAlignment.center
         header.contentView.backgroundColor = UIColor.lightGray
     }
