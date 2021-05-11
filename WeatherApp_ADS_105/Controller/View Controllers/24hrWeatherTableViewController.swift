@@ -1,59 +1,45 @@
 //
-//  DailyWeatherTableViewController.swift
+//  24hrWeatherTableViewController.swift
 //  WeatherApp_ADS_105
 //
-//  Created by Priyanka PS on 3/5/21.
+//  Created by Priyanka PS on 10/5/21.
 //
 
 import UIKit
 
-class DailyWeatherTableViewController: UITableViewController {
-    var location:Location!
-    var dailyResultArray: [DailyWeatherDataModel] = []
+class _4hrWeatherTableViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        WeatherDataController.shared.getOpenWeatherDataFor(forLatitude: location.latitude, andLongitude: location.longitude) { (result) in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let currentWeather):
-                    self.dailyResultArray = currentWeather.daily
-                   // print(self.dailyResultArray?.daily as Any)
-                   //print(currentWeather)
-                    print(self.dailyResultArray)
-                    self.tableView.reloadData()
-                //self.updateUI(with: currentWeather.current )
-                case .failure(let error):
-                    print(error)
-                }
-            }
-           
-        }
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print(self.dailyResultArray.count)
-        return self.dailyResultArray.count
+        return 0
     }
 
-
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "dailyWeatherCell", for: indexPath) as! DailyWeatherTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        
-        cell.update(item: self.dailyResultArray[indexPath.row])
+
         return cell
     }
-
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -89,16 +75,6 @@ class DailyWeatherTableViewController: UITableViewController {
         return true
     }
     */
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection
-                                section: Int) -> String? {
-        return location.name
-    }
-    
-    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
-        header.textLabel?.textAlignment = NSTextAlignment.center
-        header.contentView.backgroundColor = UIColor.lightGray
-    }
 
     /*
     // MARK: - Navigation

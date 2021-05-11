@@ -25,6 +25,14 @@ class CurrentWeatherTableViewController: UITableViewController {
                 print(error)
             }
         }
+        
+        let favButton = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(favButtonTapped))
+        navigationItem.rightBarButtonItem = favButton
+    }
+    
+    @objc func favButtonTapped() {
+        print("button tapped")
+        navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart.fill")
     }
     
     func updateUI(with currentWeather:CurrentWeatherDataModel){

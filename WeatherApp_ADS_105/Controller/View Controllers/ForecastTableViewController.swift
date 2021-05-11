@@ -13,6 +13,7 @@ class ForecastTableViewController: UITableViewController {
     private enum segueIdentifier {
         static let forecastToCurrentWeatherInformation: String = "forecastToCurrentWeather"
         static let forecastToDailyWeatherInformation: String = "toDailyWeatherForecast"
+        static let forecastTo24hrWeatherInformation: String = "to24-hrForecast"
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +81,9 @@ class ForecastTableViewController: UITableViewController {
             }
         case (segueIdentifier.forecastToDailyWeatherInformation, let destination as DailyWeatherTableViewController):
               destination.location = location
+        case (segueIdentifier.forecastTo24hrWeatherInformation, let destination as HourlyWeatherTableViewController):
+              destination.location = location
+            
         default:
             break
         }
