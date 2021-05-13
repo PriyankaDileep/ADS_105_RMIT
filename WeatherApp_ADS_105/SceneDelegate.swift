@@ -17,6 +17,39 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        guard let location = Location.stored() else { return }
+        print("location\(location)")
+       
+       let forecastID = UserDefaults.standard.integer(forKey: "forecastID")
+            print("check\(forecastID)")
+        
+        guard let navController = self.window?.rootViewController as? UINavigationController else { return }
+        
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let locationVC = storyboard.instantiateViewController(identifier: "LocationViewController")
+        
+        let forecastVC: ForecastTableViewController = (storyboard.instantiateViewController(identifier: "ForecastViewController")as? ForecastTableViewController)!
+        forecastVC.location = location
+        if forecastID == 0 {
+            let currentVC: CurrentWeatherTableViewController = (storyboard.instantiateViewController(identifier: "CurrentWeatherViewController")as? CurrentWeatherTableViewController)!
+            currentVC.location = location
+            navController.viewControllers = [locationVC,forecastVC, currentVC]
+        } else if forecastID == 1 {
+            let hourlyVC: HourlyWeatherTableViewController = (storyboard.instantiateViewController(identifier: "HourlyWeatherViewController")as? HourlyWeatherTableViewController)!
+            hourlyVC.location = location
+            navController.viewControllers = [locationVC,forecastVC, hourlyVC]
+        } else {
+            let dailyVC: DailyWeatherTableViewController = (storyboard.instantiateViewController(identifier: "DailyWeatherViewController")as? DailyWeatherTableViewController)!
+            dailyVC.location = location
+            navController.viewControllers = [locationVC,forecastVC, dailyVC]
+        }
+        
+        
+        
+//
+//        navController.viewControllers = [locationVC,forecastVC, currentVC, hourlyVC, dailyVC]
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

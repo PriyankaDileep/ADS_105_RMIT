@@ -10,6 +10,7 @@ import UIKit
 class ForecastTableViewController: UITableViewController {
     
     var location:Location!
+    private var forecasts:[Forecast] = ForecastDataController.forecasts
     private enum segueIdentifier {
         static let forecastToCurrentWeatherInformation: String = "forecastToCurrentWeather"
         static let forecastToDailyWeatherInformation: String = "toDailyWeatherForecast"
@@ -21,6 +22,8 @@ class ForecastTableViewController: UITableViewController {
        
     }
 
+
+
     // MARK: - Table view data source
 
    
@@ -29,7 +32,7 @@ class ForecastTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-
+ 
         return cell
     }
     */
@@ -78,11 +81,20 @@ class ForecastTableViewController: UITableViewController {
         case (segueIdentifier.forecastToCurrentWeatherInformation , let destination as CurrentWeatherTableViewController):
             if let indexpath = self.tableView.indexPathForSelectedRow {
                 destination.location = location
+                destination.forecast = forecasts[indexpath.row]
             }
         case (segueIdentifier.forecastToDailyWeatherInformation, let destination as DailyWeatherTableViewController):
-              destination.location = location
+            if let indexpath = self.tableView.indexPathForSelectedRow {
+                destination.location = location
+              destination.forecast = forecasts[indexpath.row]
+            }
+              
         case (segueIdentifier.forecastTo24hrWeatherInformation, let destination as HourlyWeatherTableViewController):
-              destination.location = location
+            if let indexpath = self.tableView.indexPathForSelectedRow {
+                destination.location = location
+              destination.forecast = forecasts[indexpath.row]
+            }
+              
             
         default:
             break

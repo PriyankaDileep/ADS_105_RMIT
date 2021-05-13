@@ -9,6 +9,7 @@ import UIKit
 
 class HourlyWeatherTableViewController: UITableViewController {
     var location:Location!
+    var forecast:Forecast!
     var dailyResultArray: [DailyWeatherDataModel] = []
    
     @IBOutlet weak var weatherIconImageView: UIImageView!
@@ -37,12 +38,37 @@ class HourlyWeatherTableViewController: UITableViewController {
             }
            
         }
-      
+        let favButton = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(favButtonTapped))
+        navigationItem.rightBarButtonItem = favButton
+        updateFavButton()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    @objc func favButtonTapped() {
+        let forecastID = UserDefaults.standard.integer(forKey: "forecastID")
+        if (Location.stored() == location && forecastID == 2 ){
+            UserDefaults.standard.setValue(nil, forKey: "cityName")
+            UserDefaults.standard.setValue(nil, forKey: "forecastID")
+            navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart.fill")
+        } else {
+            UserDefaults.standard.setValue(location?.data, forKey: "cityName")
+            UserDefaults.standard.setValue(2, forKey: "forecastID")
+            navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart")
+        }
+        updateFavButton()
+    }
+    
+    private func updateFavButton() {
+        let forecastID = UserDefaults.standard.integer(forKey: "forecastID")
+        if (Location.stored() == location && forecastID == 2 ) {
+            navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart.fill")
+        } else {
+            navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart")
+        }
     }
     
     func updateUI(with dayWeather:DailyWeatherDataModel){

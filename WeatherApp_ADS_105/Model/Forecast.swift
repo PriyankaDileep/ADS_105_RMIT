@@ -7,6 +7,8 @@
 
 import Foundation
 
-struct Forecast {
+struct Forecast:Codable, Equatable {
     var name: String
+    
+   
 }

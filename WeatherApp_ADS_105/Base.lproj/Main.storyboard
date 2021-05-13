@@ -10,7 +10,7 @@
         <!--Locations-->
         <scene sceneID="Feq-N2-NOL">
             <objects>
-                <tableViewController id="MiH-ad-hcM" customClass="HomeTableViewController" customModule="WeatherApp_ADS_105" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LocationViewController" id="MiH-ad-hcM" customClass="HomeTableViewController" customModule="WeatherApp_ADS_105" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ya5-LM-qxG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
         <!--Select a forecast-->
         <scene sceneID="ec8-Gd-euo">
             <objects>
-                <tableViewController id="BbW-S4-lBe" customClass="ForecastTableViewController" customModule="WeatherApp_ADS_105" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ForecastViewController" id="BbW-S4-lBe" customClass="ForecastTableViewController" customModule="WeatherApp_ADS_105" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="MRL-Y3-hQb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,7 +50,7 @@
                         <sections>
                             <tableViewSection id="dXW-9M-jF8">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="45" id="upD-c0-Z1E">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="forecastTableViewCell" rowHeight="45" id="upD-c0-Z1E">
                                         <rect key="frame" x="0.0" y="18" width="414" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="upD-c0-Z1E" id="Vjp-sz-vX4">
@@ -142,7 +142,7 @@
         <!--Current Weather-->
         <scene sceneID="d8u-Uz-45M">
             <objects>
-                <tableViewController id="0mS-R8-Ddt" customClass="CurrentWeatherTableViewController" customModule="WeatherApp_ADS_105" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CurrentWeatherViewController" id="0mS-R8-Ddt" customClass="CurrentWeatherTableViewController" customModule="WeatherApp_ADS_105" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="vZ8-AH-71r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -242,7 +242,7 @@
         <!--24-hr forecast-->
         <scene sceneID="ipQ-Qj-Iey">
             <objects>
-                <tableViewController id="dDK-Es-xnr" customClass="HourlyWeatherTableViewController" customModule="WeatherApp_ADS_105" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HourlyWeatherViewController" id="dDK-Es-xnr" customClass="HourlyWeatherTableViewController" customModule="WeatherApp_ADS_105" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oah-D6-jzY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -351,7 +351,7 @@
         <!--7-day forecast-->
         <scene sceneID="b6V-2t-Y6s">
             <objects>
-                <tableViewController id="Eh0-Lz-ECL" customClass="DailyWeatherTableViewController" customModule="WeatherApp_ADS_105" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DailyWeatherViewController" id="Eh0-Lz-ECL" customClass="DailyWeatherTableViewController" customModule="WeatherApp_ADS_105" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Nx2-U0-531">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
