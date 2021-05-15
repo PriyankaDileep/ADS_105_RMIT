@@ -31,18 +31,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let forecastVC: ForecastTableViewController = (storyboard.instantiateViewController(identifier: "ForecastViewController")as? ForecastTableViewController)!
         forecastVC.location = location
+        let currentVC: CurrentWeatherTableViewController = (storyboard.instantiateViewController(identifier: "CurrentWeatherViewController")as? CurrentWeatherTableViewController)!
+        currentVC.location = location
+        let hourlyVC: HourlyWeatherTableViewController = (storyboard.instantiateViewController(identifier: "HourlyWeatherViewController")as? HourlyWeatherTableViewController)!
+        hourlyVC.location = location
+        let dailyVC: DailyWeatherTableViewController = (storyboard.instantiateViewController(identifier: "DailyWeatherViewController")as? DailyWeatherTableViewController)!
+        dailyVC.location = location
         if forecastID == 0 {
-            let currentVC: CurrentWeatherTableViewController = (storyboard.instantiateViewController(identifier: "CurrentWeatherViewController")as? CurrentWeatherTableViewController)!
-            currentVC.location = location
+            
             navController.viewControllers = [locationVC,forecastVC, currentVC]
         } else if forecastID == 1 {
-            let hourlyVC: HourlyWeatherTableViewController = (storyboard.instantiateViewController(identifier: "HourlyWeatherViewController")as? HourlyWeatherTableViewController)!
-            hourlyVC.location = location
+            
             navController.viewControllers = [locationVC,forecastVC, hourlyVC]
-        } else {
-            let dailyVC: DailyWeatherTableViewController = (storyboard.instantiateViewController(identifier: "DailyWeatherViewController")as? DailyWeatherTableViewController)!
-            dailyVC.location = location
+        } else if forecastID == 2{
+            
             navController.viewControllers = [locationVC,forecastVC, dailyVC]
+        } else {
+            navController.viewControllers = [locationVC,forecastVC, currentVC, hourlyVC, dailyVC]
         }
         
         

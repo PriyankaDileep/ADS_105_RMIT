@@ -50,13 +50,13 @@ class HourlyWeatherTableViewController: UITableViewController {
     
     @objc func favButtonTapped() {
         let forecastID = UserDefaults.standard.integer(forKey: "forecastID")
-        if (Location.stored() == location && forecastID == 2 ){
+        if (Location.stored() == location && forecastID == 1 ){
             UserDefaults.standard.setValue(nil, forKey: "cityName")
             UserDefaults.standard.setValue(nil, forKey: "forecastID")
             navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart.fill")
         } else {
             UserDefaults.standard.setValue(location?.data, forKey: "cityName")
-            UserDefaults.standard.setValue(2, forKey: "forecastID")
+            UserDefaults.standard.setValue(1, forKey: "forecastID")
             navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart")
         }
         updateFavButton()
@@ -64,7 +64,7 @@ class HourlyWeatherTableViewController: UITableViewController {
     
     private func updateFavButton() {
         let forecastID = UserDefaults.standard.integer(forKey: "forecastID")
-        if (Location.stored() == location && forecastID == 2 ) {
+        if (Location.stored() == location && forecastID == 1 ) {
             navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart.fill")
         } else {
             navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart")
