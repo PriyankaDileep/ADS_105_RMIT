@@ -19,6 +19,7 @@ class HourlyWeatherTableViewController: UITableViewController {
     @IBOutlet weak var highTemperatureLabel: UILabel!
     @IBOutlet weak var weatherConditionLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
+    var shadowButton = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 30))
     override func viewDidLoad() {
         super.viewDidLoad()
         WeatherDataController.shared.getOpenWeatherDataFor(forLatitude: location.latitude, andLongitude: location.longitude) { (result) in
@@ -38,7 +39,10 @@ class HourlyWeatherTableViewController: UITableViewController {
             }
            
         }
-        let favButton = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(favButtonTapped))
+        shadowButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        let favButton: UIBarButtonItem = UIBarButtonItem(customView: shadowButton)
+       
+        shadowButton.addTarget(self, action: #selector(favButtonTapped(sender:)), for: .touchUpInside)
         navigationItem.rightBarButtonItem = favButton
         updateFavButton()
         // Uncomment the following line to preserve selection between presentations
@@ -48,16 +52,19 @@ class HourlyWeatherTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    @objc func favButtonTapped() {
+    @objc func favButtonTapped(sender: UIButton) {
         let forecastID = UserDefaults.standard.integer(forKey: "forecastID")
         if (Location.stored() == location && forecastID == 1 ){
             UserDefaults.standard.setValue(nil, forKey: "cityName")
             UserDefaults.standard.setValue(nil, forKey: "forecastID")
-            navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart.fill")
+            shadowButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            animateFavouriteButton(sender: sender)
         } else {
             UserDefaults.standard.setValue(location?.data, forKey: "cityName")
             UserDefaults.standard.setValue(1, forKey: "forecastID")
-            navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart")
+            
+            shadowButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            animateFavouriteButton(sender: sender)
         }
         updateFavButton()
     }
@@ -65,10 +72,23 @@ class HourlyWeatherTableViewController: UITableViewController {
     private func updateFavButton() {
         let forecastID = UserDefaults.standard.integer(forKey: "forecastID")
         if (Location.stored() == location && forecastID == 1 ) {
-            navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart.fill")
+            shadowButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         } else {
-            navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart")
+            shadowButton.setImage(UIImage(systemName: "heart"), for: .normal)
         }
+    }
+    
+    func animateFavouriteButton(sender:UIButton) {
+        let customview = sender
+        UIView.animate(withDuration: 1.0, animations: {
+            let scaleTransform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+            customview.transform = scaleTransform
+        }) { (_) in
+            UIView.animate(withDuration: 1.0, animations: {
+                customview.transform = CGAffineTransform.identity
+            })
+        }
+        
     }
     
     func updateUI(with dayWeather:DailyWeatherDataModel){
