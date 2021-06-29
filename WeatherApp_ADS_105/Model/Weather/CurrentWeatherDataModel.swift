@@ -80,7 +80,7 @@ struct CurrentWeatherDataModel: Codable {
         try container.encode(self.visibility, forKey: .visibility)
         try container.encode(self.windSpeed, forKey: .windSpeed)
         try container.encode(self.windDegree, forKey: .windDegree)
-        if let windGust = self.windGust {
+        if self.windGust != nil {
             try container.encode(self.windGust, forKey: .windGust)
         } else {
             try container.encodeNil(forKey: .windGust)

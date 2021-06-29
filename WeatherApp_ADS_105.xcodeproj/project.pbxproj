@@ -32,6 +32,7 @@
 		D49BE0B6262FE3C000ACBB98 /* LocationDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE0B5262FE3C000ACBB98 /* LocationDataController.swift */; };
 		D49BE0C02631782C00ACBB98 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE0BF2631782C00ACBB98 /* HomeTableViewController.swift */; };
 		D49BE0C92632DB7F00ACBB98 /* WeatherDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE0C82632DB7F00ACBB98 /* WeatherDataController.swift */; };
+		D4B7451326521289003D0BE0 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7451226521289003D0BE0 /* SpinnerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		D49BE0B5262FE3C000ACBB98 /* LocationDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataController.swift; sourceTree = "<group>"; };
 		D49BE0BF2631782C00ACBB98 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		D49BE0C82632DB7F00ACBB98 /* WeatherDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataController.swift; sourceTree = "<group>"; };
+		D4B7451226521289003D0BE0 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,18 +127,10 @@
 		D401C6E9263E58E9006E4026 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D4B7451126521222003D0BE0 /* Spinner */,
 				D42DD6DD264635C100B02E97 /* ReusableFunctions.swift */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		D401C73E2644EE2F006E4026 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D401C73F2644EE5D006E4026 /* DailyWeatherTableViewCell.swift */,
-				D42DD6F426492BAA00B02E97 /* DayWeatherTableViewCell.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		D49BE06D262FB61F00ACBB98 = {
@@ -162,6 +156,7 @@
 		D49BE078262FB61F00ACBB98 /* WeatherApp_ADS_105 */ = {
 			isa = PBXGroup;
 			children = (
+				D4B7450D26520274003D0BE0 /* View */,
 				D401C6E9263E58E9006E4026 /* Utilities */,
 				D49BE0BA263175E600ACBB98 /* Controller */,
 				D49BE0B1262FE15600ACBB98 /* Model */,
@@ -206,7 +201,6 @@
 		D49BE0BA263175E600ACBB98 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D401C73E2644EE2F006E4026 /* View */,
 				D49BE0C72632DABB00ACBB98 /* Data Controllers */,
 				D49BE0BB263177B100ACBB98 /* View Controllers */,
 			);
@@ -233,6 +227,23 @@
 				D401C6D3263BA611006E4026 /* ForecastDataController.swift */,
 			);
 			path = "Data Controllers";
+			sourceTree = "<group>";
+		};
+		D4B7450D26520274003D0BE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D401C73F2644EE5D006E4026 /* DailyWeatherTableViewCell.swift */,
+				D42DD6F426492BAA00B02E97 /* DayWeatherTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4B7451126521222003D0BE0 /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				D4B7451226521289003D0BE0 /* SpinnerViewController.swift */,
+			);
+			path = Spinner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +395,7 @@
 				D42DD6ED2648C12700B02E97 /* HourlyWeatherTableViewController.swift in Sources */,
 				D49BE0B6262FE3C000ACBB98 /* LocationDataController.swift in Sources */,
 				D401C6D9263BA653006E4026 /* Forecast.swift in Sources */,
+				D4B7451326521289003D0BE0 /* SpinnerViewController.swift in Sources */,
 				D49BE07C262FB61F00ACBB98 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

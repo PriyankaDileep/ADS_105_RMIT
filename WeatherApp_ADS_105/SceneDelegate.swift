@@ -20,11 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let location = Location.stored() else { return }
         print("location\(location)")
        
-       let forecastID = UserDefaults.standard.integer(forKey: "forecastID")
-            print("check\(forecastID)")
-        
+        let forecastID = UserDefaults.standard.integer(forKey: "forecastID")
+  
         guard let navController = self.window?.rootViewController as? UINavigationController else { return }
-        
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let locationVC = storyboard.instantiateViewController(identifier: "LocationViewController")
@@ -49,12 +47,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         } else {
             navController.viewControllers = [locationVC,forecastVC, currentVC, hourlyVC, dailyVC]
         }
-        
-        
-        
-//
-//        navController.viewControllers = [locationVC,forecastVC, currentVC, hourlyVC, dailyVC]
-        
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
